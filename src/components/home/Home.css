@@ -1,0 +1,86 @@
+.home{
+    width: 100vw;
+    height: 90vh;
+    background: -o-linear-gradient(left, var(--back) 20px, transparent 1%) center, -o-linear-gradient(var(--back) 20px, transparent 1%) center, var(--button);
+    background: linear-gradient(90deg, var(--back) 20px, transparent 1%) center, linear-gradient(var(--back) 20px, transparent 1%) center, var(--button);
+    background-size: 22px 22px;
+  
+}
+.home .container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+}
+.home .container .right{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.home .container .left{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    
+}
+.home .container .left .home-head{
+    text-align: left;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    color: var(--head);
+}
+.home .container .left .home-para{
+    font-size:1.5rem;
+    color: var(--paragraph);
+
+}
+.home .container .left .btn-home{
+    width: 50%;
+    margin-top: 2rem;   
+    background: var(--button);
+    color: var(--button-text);
+    border-radius: 5px;
+}
+.wave{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100vw;
+    opacity: 0.8;
+}
+/* media qu*/
+  @media (max-width: 800px) {
+    .home .container .left, .home .container .right {
+      -webkit-box-flex: 100%;
+          -ms-flex: 100%;
+              flex: 100%;
+    }
+  }

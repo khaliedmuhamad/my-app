@@ -1,0 +1,25 @@
+.pagination{
+    background-color: var(--back-heads);
+    width: 100vw;
+    padding:2.5rem 0 0 0;  
+}
+.pagination .container{
+    text-align: center;
+}
+.pagination .container .links{
+    position: absolute;
+    top: 96%;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    background-color: var(--button);
+}
+.pagination .container .links a{
+    width: 25px;
+    font-size: 1.25rem;
+    height: 30px;
+    display: inline-block;
+    margin:2px 5px ;
+    border-radius: 2px;
+    background-color: var(--back);
+}

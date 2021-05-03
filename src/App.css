@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark{
+      --back:#16161a;
+    --head:#fffffe;
+    --paragraph:#94a1b2;
+    --button:#7f5af0;
+    --button-text:#fffffe;
+    --second:#72757e;
+    --stroke:#010101;
+    --back-heads:#525252
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.light{
+    --back:#fffffe;
+    --head:#2b2c34;
+    --paragraph:#2b2c34;
+    --button:#6246ea;
+    --button-text:#fffffe;
+    --second:#d1d1e9;
+    --stroke:#2b2c34;
+    --back-heads:#f2f3f7
+    
 }
-
-.App-link {
-  color: #61dafb;
+.container{
+    width: 90%;
+    margin: auto;
+    background-color: var(--first) !important;
+    color: var(--second) !important;
 }
+.btn{
+    padding:1rem 0.5rem ;
+    outline: none;
+    border: none;
+    cursor:pointer;
+    font-size: 1.25rem;
+    background: var(--button);
+    color: var(--button-text);
+    opacity: 0.8;
+    font-weight: 500;
+    border: 2px solid rgba(69, 69, 219, 0);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.btn:hover{   
+    background: var(--button);
+    color: var(--button-text);
+    opacity: 1;
+    cursor:pointer;
+    border: 2px solid var(--stroke);
+}
+.btn:active{
+    border: 2px solid var(--stroke);
+    cursor:pointer;
+
+}
+a{
+    text-decoration: none;
+}
+* {
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.btn-toggle{
+    position: fixed;
+    left: 0;
+    top: 10%;
+    background: var(--stroke);
+    color: white;
+    
 }

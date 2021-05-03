@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import { Provider } from 'react-redux';
+import store from './store/Store.js';
 
+import { Nav } from "./components/nav/Nav";
 function App() {
+const [toggle, setToggle] = useState('light');
+  const toggler =() => {
+    toggle === 'light' ? setToggle("dark") : setToggle("light")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={store}>
+    <BrowserRouter>
+    <div className={toggle}>
+        <Nav />
+        <button className='btn btn-toggle' onClick={toggler}>
+          {toggle}
+          <span>{" "}
+          <i class={
+            toggle === 'light' ? "fas fa-sun"
+            : "fas fa-moon"
+            }></i>
+          </span>
+          </button> 
     </div>
+    </BrowserRouter>
+    </Provider>
   );
 }
 
