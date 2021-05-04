@@ -1,9 +1,0 @@
-var data = { FirstName: 'Ehab', LastName: 'Kahwati', Age:23 };
-var MyPath = firebase.database().ref('Users/');
-MyPath.push(data)
-  .then(function() {
-    console.log('succeeded');
-  })
-  .catch(function(error) {
-    console.log("failed: " + error.message);
-  });
